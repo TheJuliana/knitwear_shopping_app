@@ -23,18 +23,19 @@ import 'package:provider/provider.dart';
             listen: false,
           ).addItemToCart(indexPage);
         },
+        backgroundColor: Colors.black,
+        child: Icon(Icons.add_shopping_cart),
       ),
       body: Column(
          children: [
            Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: ListView(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(24.0),
                       child: Text(
                         product.shopItems[indexPage][0],
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.start,
                         style: GoogleFonts.notoSerif(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,),),
@@ -47,15 +48,12 @@ import 'package:provider/provider.dart';
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          height: 40,
-                          child: SingleChildScrollView(
                             child: Text(
-                              product.shopItems[indexPage][3] + "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+                              product.shopItems[indexPage][3],
                               textAlign: TextAlign.center,
                               style: GoogleFonts.notoSerif(
                                 fontSize: 18,
                               ),
-                            ),
                           ),
                         ),
                       ),
