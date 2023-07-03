@@ -5,11 +5,11 @@ import '../pages/info_page.dart';
 class CartModel extends ChangeNotifier{
   // список вещей на распродаже
   final List _shopItems = [
-    // [ itemName, itemPrice, imagePath, color ]
-    ["Avocado", "4.00", "lib/assets/avocado.png", Colors.green],
-    ["Banana", "2.50", "lib/assets/banana.png", Colors.yellow],
-    ["Chicken", "12.80", "lib/assets/chicken.png", Colors.brown],
-    ["Water", "1.00", "lib/assets/water.png", Colors.blue],
+    // [ itemName, itemPrice, imagePath, description, color ]
+    ["Avocado", "4.00", "lib/assets/avocado.png", "desc1", Colors.green],
+    ["Banana", "2.50", "lib/assets/banana.png", "desc2", Colors.yellow],
+    ["Chicken", "12.80", "lib/assets/chicken.png", "desc3", Colors.brown],
+    ["Water", "1.00", "lib/assets/water.png", "desc4", Colors.blue],
   ];
 
   //массив для товаров в корзине

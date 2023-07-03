@@ -16,11 +16,13 @@ class InfoPage extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //
           Text('name' + product.shopItems[indexPage][0]),
           Image.asset(product.shopItems[indexPage][2].toString()),
-          Text('price' + product.shopItems[indexPage][1])
+          Text('desc' + product.shopItems[indexPage][3]),
+          Text('price' + product.shopItems[indexPage][1]),
         ],
       ),
     );

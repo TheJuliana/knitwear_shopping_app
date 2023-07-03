@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GroceryItemTile extends StatelessWidget {
   //какие различия между товарами
-  final String itemName, itemPrice, imagePath;
+  final String itemName, itemPrice, imagePath, itemDescription;
   final color;
   void Function()? onPressedToCart;
   void Function()? onPressedToDescription;
@@ -12,6 +12,7 @@ class GroceryItemTile extends StatelessWidget {
     required this.itemName,
     required this.itemPrice,
     required this.imagePath,
+    required this.itemDescription,
     required this.color,
     required this.onPressedToCart,
     required this.onPressedToDescription,
