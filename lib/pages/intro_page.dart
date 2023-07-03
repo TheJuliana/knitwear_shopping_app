@@ -21,7 +21,7 @@ class IntroPage extends StatelessWidget {
                       'lib/assets/knit_load.png',
                       height: 500,
                     )),
-                Container( //описание
+                Container( //описание / description
                   child: Padding(
                     padding: const EdgeInsets.all(24.0),
                     child: Text(

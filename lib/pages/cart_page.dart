@@ -14,7 +14,7 @@ class CartPage extends StatelessWidget {
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
       ),
-      body: Consumer<CartModel>( //consume the data
+      body: Consumer<CartModel>( //считывает данные / consume the data
         builder: (context, value, child) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,11 +29,11 @@ class CartPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,),
                 ),
               ),
-              // список товаров в корзине
+              // список товаров в корзине / List of items in the cart
               Expanded(
                 child: ListView.builder(
                   itemCount: value.cartItems.length,
-                  padding: EdgeInsets.all(12),//сколько товаров в корзине
+                  padding: EdgeInsets.all(12),//сколько товаров в корзине / How many items are in the cart
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -64,6 +64,7 @@ class CartPage extends StatelessWidget {
               ),
 
               //кнопка оплаты + расчет итоговой суммы
+              // / Payment button + calculation of the total amount
               Padding(
                 padding: const EdgeInsets.all(36.0),
                 child: Container(
@@ -75,7 +76,7 @@ class CartPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      //цена
+                      //цена / price
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -95,7 +96,7 @@ class CartPage extends StatelessWidget {
                         ],
                       ),
 
-                      //кнопка оплаты
+                      //кнопка оплаты / Payment button
                       Container(
                         decoration: BoxDecoration(
                           border: Border.all(

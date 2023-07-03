@@ -25,18 +25,18 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         child: Icon(Icons.shopping_bag),
       ),
-      body: SafeArea( //чтобы не залезал текст слишком высоко
+      body: SafeArea( //чтобы не залезал текст слишком высоко / so that the text does not come out too high
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 48,), //еще немного места
-            //приветствие
+            const SizedBox(height: 48,), //еще немного места / A little more space
+            //приветствие / greeting
             const Padding(
               padding:EdgeInsets.symmetric(horizontal: 24.0),
               child: Text('Greetings!'),
             ),
 
-            //болтовня
+            //слоган / tagline
             Padding(
               padding:  const EdgeInsets.symmetric(horizontal: 24.0),
               child: Text(
@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
             ),
 
             const SizedBox(height: 11),
-            //актуальное и сетка товаров
+            //актуальное и сетка товаров / Current & Product Grid
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0,),
               child: Text(
@@ -66,6 +66,7 @@ class HomePage extends StatelessWidget {
             ),
 
             //для сетки используем этот виджет для заполнения оставшегося места
+            //For the grid, use this widget to fill in the remaining space
             Expanded(
               child: Consumer<CartModel>(
                 builder: (context, value, child) {
@@ -84,7 +85,6 @@ class HomePage extends StatelessWidget {
                           imageSmallPath: value.shopItems[index][2],
                           imageBigPath: value.shopItems[index][3],
                           itemDescription: value.shopItems[index][4],
-                          //color: value.shopItems[index][4],
                           onPressedToCart: () {
                             Provider.of<CartModel>(
                               context,

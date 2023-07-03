@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class GroceryItemTile extends StatefulWidget {
-  //какие различия между товарами
+  //какие различия между товарами / What are the differences between the products
   final String itemName, itemPrice, imageSmallPath, imageBigPath, itemDescription;
   //final color;
   void Function()? onPressedToCart;
   void Function()? onPressedToDescription;
 
-  GroceryItemTile({ //конструктор
+  GroceryItemTile({ //конструктор / constructor
     super.key,
     required this.itemName,
     required this.itemPrice,
@@ -40,7 +40,7 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              //->переход на страницу с описанием
+              //-> переход на страницу с описанием / -> go to the description page
               MaterialButton(
                 onPressed: widget.onPressedToDescription,
                 height: 120,
@@ -50,13 +50,14 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    Container( //название и цена
+                    Container( //название и цена / name and price
                       padding: EdgeInsets.all(2.0),
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(255, 255, 255, 0.5),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: MaterialButton(
+
+                      child: MaterialButton(   //цена и кнопка / price and button
                         onPressed: widget.onPressedToCart,
                         child:
                             Column(
@@ -83,7 +84,7 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
                   ],
                 ),
               ),
-              //цена и кнопка
+
             ],
           )
       ),
