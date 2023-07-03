@@ -18,7 +18,7 @@ class InfoPage extends StatelessWidget {
       body: Column(
         children: [
           Text('name' + product.shopItems[indexPage][0]),
-          Text('description' + product.shopItems[indexPage][0]),
+          Image.asset(product.shopItems[indexPage][2].toString()),
           Text('price' + product.shopItems[indexPage][1])
         ],
       ),
