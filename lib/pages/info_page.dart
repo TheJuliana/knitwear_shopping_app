@@ -16,6 +16,7 @@ import 'package:provider/provider.dart';
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
       ),
+      //кнопка добавления в корзину
       floatingActionButton: FloatingActionButton(
         onPressed:  () {
           Provider.of<CartModel>(
@@ -41,12 +42,12 @@ import 'package:provider/provider.dart';
                           fontSize: 32,
                           fontWeight: FontWeight.bold,),),
                     ),
-                    //Image
+                    //Изображение
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(product.shopItems[indexPage][2].toString()),
                       ),
-                    //Description
+                    //Описание
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(

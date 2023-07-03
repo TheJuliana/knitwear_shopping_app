@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class GroceryItemTile extends StatefulWidget {
   //какие различия между товарами
   final String itemName, itemPrice, imagePath, itemDescription;
-  final color;
+  //final color;
   void Function()? onPressedToCart;
   void Function()? onPressedToDescription;
 
@@ -13,7 +13,6 @@ class GroceryItemTile extends StatefulWidget {
     required this.itemPrice,
     required this.imagePath,
     required this.itemDescription,
-    required this.color,
     required this.onPressedToCart,
     required this.onPressedToDescription,
 
@@ -30,12 +29,8 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
       padding: const EdgeInsets.all(8.0),
       child: Container(
           decoration: BoxDecoration(
-            color: widget.color[100],
             borderRadius: BorderRadius.circular(12),
-            /*border: Border.all(
-              width: 1,
-              color: Color.fromRGBO(0, 0, 0, 0.2),
-            ),*/
+
             image: DecorationImage(
               image: AssetImage(widget.imagePath),
               fit: BoxFit.cover,
@@ -44,29 +39,23 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              //->go to description page
+              //->переход на страницу с описанием
               MaterialButton(
                 onPressed: widget.onPressedToDescription,
                 height: 100,
               ),
-              //название
               Container(
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    Container(
+                    Container( //название и цена
                       padding: EdgeInsets.all(2.0),
                       decoration: BoxDecoration(
                         color: Color.fromRGBO(255, 255, 255, 0.5),
-                       /* border: Border.all(
-                          width: 1,
-                          color: Colors.black,
-                        ),*/
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: MaterialButton(
                         onPressed: widget.onPressedToCart,
-                        //color: color[800],
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -92,7 +81,6 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
                 ),
               ),
               //цена и кнопка
-
             ],
           )
       ),
