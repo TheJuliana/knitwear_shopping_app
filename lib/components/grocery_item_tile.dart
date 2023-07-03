@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GroceryItemTile extends StatelessWidget {
+class GroceryItemTile extends StatefulWidget {
   //какие различия между товарами
   final String itemName, itemPrice, imagePath, itemDescription;
   final color;
@@ -20,19 +20,24 @@ class GroceryItemTile extends StatelessWidget {
   });
 
   @override
+  State<GroceryItemTile> createState() => _GroceryItemTileState();
+}
+
+class _GroceryItemTileState extends State<GroceryItemTile> {
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
           decoration: BoxDecoration(
-            color: color[100],
+            color: widget.color[100],
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(
+            /*border: Border.all(
               width: 1,
-              color: Colors.black,
-            ),
+              color: Color.fromRGBO(0, 0, 0, 0.2),
+            ),*/
             image: DecorationImage(
-              image: AssetImage(imagePath),
+              image: AssetImage(widget.imagePath),
               fit: BoxFit.cover,
             ),
           ),
@@ -41,7 +46,7 @@ class GroceryItemTile extends StatelessWidget {
             children: [
               //->go to description page
               MaterialButton(
-                onPressed: onPressedToDescription,
+                onPressed: widget.onPressedToDescription,
                 height: 100,
               ),
               //название
@@ -50,28 +55,31 @@ class GroceryItemTile extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
+                      padding: EdgeInsets.all(2.0),
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(255, 255, 255, 0.3),
-                        border: Border.all(
+                        color: Color.fromRGBO(255, 255, 255, 0.5),
+                       /* border: Border.all(
                           width: 1,
                           color: Colors.black,
-                        ),
+                        ),*/
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: MaterialButton(
-                        onPressed: onPressedToCart,
+                        onPressed: widget.onPressedToCart,
                         //color: color[800],
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Text(itemName,
-                              style: const TextStyle(
+                            Text(widget.itemName,
+                              style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),),
+                                fontSize: 12,
+                              ),
+                            ),
                             Text(
-                              "\$" + itemPrice,
+                              "\$" + widget.itemPrice,
                               style: const TextStyle(
+                                fontSize: 16,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),

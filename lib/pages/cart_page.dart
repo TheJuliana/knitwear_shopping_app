@@ -68,7 +68,7 @@ class CartPage extends StatelessWidget {
                 padding: const EdgeInsets.all(36.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.green,
+                    color: Color.fromRGBO(255, 205, 0, 1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: EdgeInsets.all(12.0),
@@ -81,13 +81,13 @@ class CartPage extends StatelessWidget {
                         children: [
                           Text(
                             'Total price',
-                            style: TextStyle(color: Colors.green[100]),
+                            style: TextStyle(color: Color.fromRGBO(0, 0, 0, 0.5)),
                           ),
                           const SizedBox(height: 4,),
                           Text(
                             "\$" + value.calculateTotal(),
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
@@ -99,7 +99,7 @@ class CartPage extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.green.shade100,
+                            color: Color.fromRGBO(0, 0, 0, 0.5),
                           ),
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -109,7 +109,7 @@ class CartPage extends StatelessWidget {
                             Text(
                               'Pay now',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -117,7 +117,7 @@ class CartPage extends StatelessWidget {
                             Icon(
                               Icons.arrow_forward,
                               size: 16,
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                           ],
                         ),
