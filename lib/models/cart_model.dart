@@ -6,9 +6,9 @@ class CartModel extends ChangeNotifier{
   // список вещей на распродаже
   final List _shopItems = [
     // [ itemName, itemPrice, imagePath, description, color ]
-    ["Avocado", "4.00", "lib/assets/avocado.png", "desc1", Colors.green],
-    ["Banana", "2.50", "lib/assets/banana.png", "desc2", Colors.yellow],
-    ["Chicken", "12.80", "lib/assets/chicken.png", "desc3", Colors.brown],
+    ["Checkered shopper", "4.00", "lib/assets/shopper1.jpg", "30х20 centimeters", Colors.green],
+    ["Shopper in a flower", "2.50", "lib/assets/shopper2.jpg", "desc2", Colors.yellow],
+    ["Shopper with hearts", "12.80", "lib/assets/shopper3.jpg", "desc3", Colors.brown],
     ["Water", "1.00", "lib/assets/water.png", "desc4", Colors.blue],
   ];
 
