@@ -45,14 +45,14 @@ import 'package:provider/provider.dart';
                     //Изображение
                     Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(product.shopItems[indexPage][2].toString()),
+                        child: Image.asset(product.shopItems[indexPage][3].toString()),
                       ),
                     //Описание
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                           child: Text(
-                            product.shopItems[indexPage][3],
+                            product.shopItems[indexPage][4],
                             textAlign: TextAlign.center,
                             style: GoogleFonts.notoSerif(
                               fontSize: 18,
@@ -83,7 +83,7 @@ import 'package:provider/provider.dart';
                        Text('Price:',
                          style: TextStyle(color: Colors.grey[600]),
                          ),
-                       Text(product.shopItems[indexPage][1], style: TextStyle(
+                       Text("\$"+product.shopItems[indexPage][1], style: TextStyle(
                          color: Colors.black,
                          fontSize: 18,
                          fontWeight: FontWeight.bold,

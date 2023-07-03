@@ -36,33 +36,31 @@ class HomePage extends StatelessWidget {
               child: Text('Greetings!'),
             ),
 
-            const SizedBox(height: 4.0,),
-
             //болтовня
             Padding(
               padding:  const EdgeInsets.symmetric(horizontal: 24.0),
               child: Text(
-                'Lets go order',
-                textAlign: TextAlign.center,
+                'Tenderness, quality and beauty',
+                textAlign: TextAlign.start,
                 style: GoogleFonts.notoSerif(
-                  fontSize: 36,
+                  fontSize: 26,
                   fontWeight: FontWeight.bold,),
               ),
             ),
 
-            const SizedBox(height: 24,),
+            //const SizedBox(height: 24,),
             //разделитель - линия
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: Divider(),
             ),
 
-            const SizedBox(height: 24,),
+            const SizedBox(height: 11),
             //актуальное и сетка товаров
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0,),
               child: Text(
-                'Fresh items',
+                'In stock:',
                 style: TextStyle(fontSize: 16,),
               ),
             ),
@@ -83,8 +81,9 @@ class HomePage extends StatelessWidget {
                           // for each index [0] - is the item name in List
                           itemName: value.shopItems[index][0],
                           itemPrice: value.shopItems[index][1],
-                          imagePath: value.shopItems[index][2],
-                          itemDescription: value.shopItems[index][3],
+                          imageSmallPath: value.shopItems[index][2],
+                          imageBigPath: value.shopItems[index][3],
+                          itemDescription: value.shopItems[index][4],
                           //color: value.shopItems[index][4],
                           onPressedToCart: () {
                             Provider.of<CartModel>(

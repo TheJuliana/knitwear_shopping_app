@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class GroceryItemTile extends StatefulWidget {
   //какие различия между товарами
-  final String itemName, itemPrice, imagePath, itemDescription;
+  final String itemName, itemPrice, imageSmallPath, imageBigPath, itemDescription;
   //final color;
   void Function()? onPressedToCart;
   void Function()? onPressedToDescription;
@@ -11,7 +11,8 @@ class GroceryItemTile extends StatefulWidget {
     super.key,
     required this.itemName,
     required this.itemPrice,
-    required this.imagePath,
+    required this.imageSmallPath,
+    required this.imageBigPath,
     required this.itemDescription,
     required this.onPressedToCart,
     required this.onPressedToDescription,
@@ -32,7 +33,7 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
             borderRadius: BorderRadius.circular(12),
 
             image: DecorationImage(
-              image: AssetImage(widget.imagePath),
+              image: AssetImage(widget.imageSmallPath),
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +43,8 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
               //->переход на страницу с описанием
               MaterialButton(
                 onPressed: widget.onPressedToDescription,
-                height: 100,
+                height: 120,
+                minWidth: 150,
               ),
               Container(
                 padding: EdgeInsets.all(8.0),
@@ -56,25 +58,26 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
                       ),
                       child: MaterialButton(
                         onPressed: widget.onPressedToCart,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Text(widget.itemName,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
-                              ),
+                        child:
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(widget.itemName,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                                Text(
+                                  "\$" + widget.itemPrice,
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              "\$" + widget.itemPrice,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
                       ),
                     ),
                   ],
