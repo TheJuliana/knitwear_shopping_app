@@ -31,6 +31,7 @@ import 'package:provider/provider.dart';
            Expanded(
                 child: ListView(
                   children: [
+                    //Name
                     Padding(
                       padding: const EdgeInsets.all(24.0),
                       child: Text(
@@ -40,62 +41,58 @@ import 'package:provider/provider.dart';
                           fontSize: 32,
                           fontWeight: FontWeight.bold,),),
                     ),
+                    //Image
                     Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(product.shopItems[indexPage][2].toString()),
                       ),
-                
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                            child: Text(
-                              product.shopItems[indexPage][3],
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.notoSerif(
-                                fontSize: 18,
-                              ),
-                          ),
-                        ),
-                      ),
-                    
-                  //
-                  //   Padding(
-                  //     padding: const EdgeInsets.all(8.0),
-                  //     child: Image.asset(product.shopItems[indexPage][2].toString()),
-                  //   ),
-                  //   Padding(
-                  //     padding: const EdgeInsets.all(8.0),
-                  //     child: Text(
-                  //       product.shopItems[indexPage][3],
-                  //       textAlign: TextAlign.center,
-                  //       style: GoogleFonts.notoSerif(
-                  //         fontSize: 18,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ],
-                   // ),
-
-
-               /*     Padding(
+                    //Description
+                    Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: GestureDetector(
-                        onPressed: product.addItemToCart(indexPage),
-                        child: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(8),
+                      child: Container(
+                          child: Text(
+                            product.shopItems[indexPage][3],
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.notoSerif(
+                              fontSize: 18,
                             ),
-                            padding: EdgeInsets.all(12.0),
-
-                            child: Text('price' + product.shopItems[indexPage][1])
                         ),
                       ),
-                    ),*/
+                    ),
                   ],
                 ),
-
               ),
+
+           const Padding(
+             padding: EdgeInsets.symmetric(horizontal: 8.0),
+             child: Divider(),
+           ),
+
+           //Price
+           Padding(
+             padding: const EdgeInsets.all(16.0),
+             child: Container(
+               padding: const EdgeInsets.all(8.0),
+               child: Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 children: [
+                   Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                       Text('Price:',
+                         style: TextStyle(color: Colors.grey[600]),
+                         ),
+                       Text(product.shopItems[indexPage][1], style: TextStyle(
+                         color: Colors.black,
+                         fontSize: 18,
+                         fontWeight: FontWeight.bold,
+                       ),),
+                     ],
+                   ),
+                 ],
+               ),
+             ),
+           ),
          ],
         ),
       );

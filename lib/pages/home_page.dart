@@ -101,18 +101,7 @@ class HomePage extends StatelessWidget {
                                 },
                               ),
                             );
-                            /*Provider.of<CartModel>(
-                              context,
-                              listen: false,
-                            ).goToDesc(index);*/
-                          },/*=> Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                              builder: (context) {
-                                return InfoPage(index);
-                              },
-                            ),
-                          ),*/
+                          },
                         );
                       }
                   );
