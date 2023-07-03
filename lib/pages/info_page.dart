@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:knit/models/cart_model.dart';
+import 'package:provider/provider.dart';
 
 class InfoPage extends StatelessWidget {
   final int indexPage;
@@ -6,6 +8,7 @@ class InfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final product = Provider.of<CartModel>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -14,9 +17,9 @@ class InfoPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text('name' + indexPage.toString()),
-          Text('description'),
-          Text('price')
+          Text('name' + product.shopItems[indexPage][0]),
+          Text('description' + product.shopItems[indexPage][0]),
+          Text('price' + product.shopItems[indexPage][1])
         ],
       ),
     );
