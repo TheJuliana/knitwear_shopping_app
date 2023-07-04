@@ -1,4 +1,5 @@
 > Greetings! Let me introduce you to my pet project, which I did for educational practice at the university 🙃
+> > You can install the application by downloading the apk file build/app/output/flutter-apk/app-release.apk
 
 # KNIT - An online store mobile app made with Flutter
 
