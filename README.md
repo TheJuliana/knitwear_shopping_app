@@ -1,4 +1,4 @@
-> Greetings! Let me introduce you to my pet project, which I did for educational practice at the university 🙃
+> Greetings! Let me introduce you to my pet project, which I did for educational practice at the university 🙃\n
 >  _You can install the application by downloading the apk file [app-release.apk](https://github.com/TheJuliana/knitwear_shopping_app/tree/master/build/app/outputs/flutter-apk)_
 
 # KNIT - An online store mobile app made with Flutter
