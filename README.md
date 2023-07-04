@@ -1,3 +1,6 @@
+# KNIT - An online store mobile app made with Flutter
+
+-----------
 
 ![KNIT](https://github.com/TheJuliana/knitwear_shopping_app/assets/62110361/3c8e2eba-adfa-4f86-b739-99250a9f4900)
 ![KNIT (1)](https://github.com/TheJuliana/knitwear_shopping_app/assets/62110361/40360497-d3a1-47cd-9285-e2dcc125c4eb)
