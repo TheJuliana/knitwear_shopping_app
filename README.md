@@ -1,4 +1,4 @@
-> Welcome! Let me introduce you to my pet project, which I did for educational practice at the university
+> Greetings! Let me introduce you to my pet project, which I did for educational practice at the university 🙃
 # KNIT - An online store mobile app made with Flutter
 
 -----------
