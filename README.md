@@ -1,4 +1,4 @@
-![KNIT (4)](https://github.com/TheJuliana/knitwear_shopping_app/assets/62110361/52498c3d-4eae-4afa-a19c-afe195af99ec)![KNIT](https://github.com/TheJuliana/knitwear_shopping_app/assets/62110361/f7fcd2f7-e151-41b0-b023-cb31806ea9b3)# KNIT - An online store mobile app made with Flutter
+# KNIT - An online store mobile app made with Flutter
 
 -----------
 
