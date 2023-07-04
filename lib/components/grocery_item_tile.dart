@@ -38,13 +38,19 @@ class _GroceryItemTileState extends State<GroceryItemTile> {
             ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
             children: [
               //-> переход на страницу с описанием / -> go to the description page
-              MaterialButton(
-                onPressed: widget.onPressedToDescription,
-                height: 120,
-                minWidth: 150,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IconButton(
+                    onPressed: widget.onPressedToDescription,
+                    //height: 120,
+                    icon: Icon(Icons.info_outline),
+                  ),
+                ],
               ),
               Container(
                 padding: EdgeInsets.all(8.0),
